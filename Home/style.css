@@ -15,7 +15,6 @@
     top: 0;
     left: 0;
     padding: 1rem 4rem;
-    background: rgba(0, 0, 0, 0.3);
     z-index: 1000;
     display: flex;
     align-items: center;
@@ -24,7 +23,7 @@
   
   /* Logo */
   .logo {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #fff;
   }
@@ -47,7 +46,7 @@
   .nav-menu li a {
     text-decoration: none;
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     position: relative;
     transition: 0.3s;
   }
@@ -75,7 +74,7 @@
     border-radius: 999px;
     text-decoration: none;
     color: #fff;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     transition: 0.3s;
   }
   
@@ -91,11 +90,16 @@
     background: url("../assets/bg.jpg") no-repeat center center/cover;
     position: relative;
   }
+
+  .about-page .hero {
+    height: 100vh;
+    background: url("../About/about-img/about-bg.png") no-repeat center center/cover;
+    position: relative;
+  }
   
   .overlay {
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,14 +112,14 @@
   }
   
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     font-weight: bold;
   }
   
   .hero-content p {
     margin-top: 1rem;
     margin-bottom: 3rem;
-    font-size: 0.95rem;
+    font-size: 1.2rem;
     color: #ccc;
   }
 
@@ -130,10 +134,11 @@
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
+    
   }
   
   .social-icons {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   
   .social-icons a img {
@@ -412,13 +417,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns for the items */
     gap: 2rem; /* Add spacing between items */
-    text-align: center; /* Center-align all content */
+    text-align: left; /* Center-align all content */
 }
 
 .why-choose-item {
     display: flex;
     flex-direction: column; /* Stack icon and text vertically */
-    align-items: center; /* Center-align icon and text */
+    align-items: left; /* Center-align icon and text */
     gap: 0.5rem; /* Add spacing between icon and text */
 }
 
@@ -872,19 +877,26 @@
 
 
 /* Newsletter Section Styles */
+/* Newsletter Section Styles */
 .newsletter-section {
   position: relative;
-  background: url('../assets/update.png') no-repeat center center/cover; /* Background image */
-  padding: 4rem 1rem;
-  text-align: center;
+  background: url('../assets/update.png') no-repeat center center/cover;
+  padding: 4rem 2rem;
+  min-height: 60vh;
+  /* display: flex; */
   color: #fff;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: left;
 }
+
 .newsletter-container {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Align vertically center */
+  align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
@@ -895,41 +907,54 @@
 }
 
 .newsletter-content h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: bold;
-  margin-bottom: 1rem;
   line-height: 1.3;
+  padding: 10px;
 }
 
-.newsletter-content p {
+.newsletter-form-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: right;
+  gap: 1rem;
+}
+
+.newsletter-form-wrapper p {
+  margin: 0;
   font-size: 1rem;
-  color: #eee;
+  font-weight: 500;
 }
 
 .newsletter-form {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  gap: 0.5rem;
+  background-color: #fff;
+  border-radius: 999px;
+  padding: 0.3rem;
+  max-width: 400px;
+  width: 100%;
 }
 
 .newsletter-form input {
-  width: 300px;
-  padding: 0.8rem 1rem;
+  flex: 1;
   border: none;
-  border-radius: 30px;
+  padding: 0.8rem 1rem;
+  border-radius: 999px;
   font-size: 1rem;
+  outline: none;
 }
 
 .newsletter-form button {
-  padding: 0.8rem 1.5rem;
   background-color: #8e44ad;
   color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
   font-size: 1rem;
   font-weight: bold;
-  border: none;
-  border-radius: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -938,7 +963,61 @@
   background-color: #732d91;
 }
 
-  
+.footer-links {
+  background-color: #3C1866;
+  box-shadow: 0 -10px 15px #3C1866; /* Add shadow on top */
+
+  padding: 3rem 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.footer-about h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-col ul li a {
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #c084fc;
+}
+
+
+  /* --------------------------------------------------------------------------------
+   */
   /* Responsive Styles */
   @media (max-width: 768px) {
     .nav-center {
@@ -1225,27 +1304,25 @@
   }
 
 
-    .newsletter-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
-    .newsletter-form {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
 
-    .newsletter-form input {
-        width: 100%;
-        max-width: 100%;
-    }
+  .newsletter-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
 
-    .newsletter-form button {
-        width: 100%;
-    }
+  .newsletter-content,
+  .newsletter-form-wrapper {
+      align-items: center;
+      text-align: center;
+  }
+
+  .newsletter-form-wrapper {
+      align-items: center;
+  }
+
+
 }
 
     

@@ -1,0 +1,166 @@
+/* Timeline Section Styles */
+.timeline-section {
+    padding: 4rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+.timeline-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #3C1866;
+}
+
+.timeline-section .highlight {
+    color: #8e44ad;
+}
+
+.timeline-section .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.timeline-item {
+    flex: 1;
+    max-width: 22%;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.timeline-item h3 {
+    font-size: 1.5rem;
+    color: #8e44ad;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Video Section Styles */
+/* Video Section Styles */
+.video-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.video-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #8e44ad;
+    margin-bottom: 1rem;
+}
+
+.video-section .subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.video-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video-thumbnail {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Light white background */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Circular button */
+    border: 8px solid #727074; /* Purple border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.play-button span img {
+    font-size: 1.7rem;
+    padding-left: 6px;
+    color: #8e44ad; /* Purple play icon */
+}
+
+.play-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Slightly brighter on hover */
+    transform: translate(-50%, -50%) scale(1.1); /* Slight zoom effect */
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .timeline-item {
+        max-width: 100%;
+    }
+
+    .timeline-section h2 {
+        font-size: 2rem;
+    }
+
+    .timeline-section .subtitle {
+        font-size: 1rem;
+    }
+
+    .video-section h2 {
+        font-size: 2rem;
+    }
+
+    .video-section .subtitle {
+        font-size: 1rem;
+    }
+
+    .video-wrapper {
+        max-width: 100%;
+    }
+
+    .play-button {
+        width: 60px;
+        height: 60px;
+    }
+
+    .play-button span {
+        font-size: 2rem;
+    }
+}
