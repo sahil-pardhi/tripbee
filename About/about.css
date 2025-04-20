@@ -124,6 +124,104 @@
     background-color: rgba(255, 255, 255, 1); /* Slightly brighter on hover */
     transform: translate(-50%, -50%) scale(1.1); /* Slight zoom effect */
 }
+
+.vision-mission-section {
+    padding: 60px;
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff;
+    color: #333;
+  }
+  
+  .vision-mission-section .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  
+  .vision-block, .mission-block {
+    flex: 1 1 45%;
+    min-width: 300px;
+  }
+  
+  .vision-block h2,
+  .mission-block h2 {
+    font-size: 28px;
+    color: #5e2b97;
+    margin-bottom: 10px;
+  }
+  
+  .vision-block p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .vision-block .vision-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mission-block .mission-item {
+    margin-bottom: 30px;
+  }
+  
+  .mission-block .mission-item h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5e2b97;
+    margin-bottom: 5px;
+  }
+  
+  .mission-block .mission-item h3 span {
+    color: #5e2b97;
+    font-weight: 600;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+  
+  .mission-block .mission-item p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* Stats Section Styles */
+.stats-section {
+    background-color: #5e2b97; /* Purple background */
+    color: #fff; /* White text */
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.stats-section .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 1rem;
+}
+
+.stat-item {
+    flex: 1 1 30%; /* Each stat takes up 30% of the width */
+    min-width: 150px;
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0;
+}
+  
 /* Responsive Styles */
 @media (max-width: 768px) {
     .timeline {
@@ -162,5 +260,30 @@
 
     .play-button span {
         font-size: 2rem;
+    }
+
+    .vision-mission-section .container {
+        flex-direction: column;
+      }
+    
+      .vision-block,
+      .mission-block {
+        flex: 1 1 100%;
+      }
+    
+      .vision-block .vision-image img {
+        margin-top: 20px;
+      }
+
+      .stats-section .container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .stat-item h2 {
+        font-size: 2rem;
+    }
+
+    .stat-item p {
+        font-size: 1rem;
     }
 }
