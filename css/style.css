@@ -1,0 +1,1251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #fff;
+  }
+  
+  .navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1rem 4rem;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Logo */
+  .logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  /* Center nav menu */
+  .nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-menu {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .nav-menu li a:hover,
+  .nav-menu li a.active {
+    color: #fff;
+  }
+  
+  .nav-menu li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 2px;
+  }
+  
+  /* Contact Us button */
+  .contact-btn {
+    padding: 0.4rem 1rem;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.85rem;
+    transition: 0.3s;
+  }
+  
+  .contact-btn:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  
+  /* HERO SECTION */
+  .hero {
+    height: 100vh;
+    background: url("../assets/bg.jpg") no-repeat center center/cover;
+    position: relative;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 90%;
+    padding: 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .hero-content p {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 0.95rem;
+    color: #ccc;
+  }
+
+  
+  .cta-button {
+    border: 2px solid #fff;
+    
+    padding: 0.75rem 1.5rem;
+    /* margin-top: ;20 */
+    background: #fff;
+    color: #000;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .social-icons {
+    margin-top: 2rem;
+  }
+  
+  .social-icons a img {
+    width: 26px;
+    height: 26px;
+    margin: 0 10px;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    background: rgba(128, 128, 128, 0.5); /* Grey with 50% transparency */
+    border-radius: 10%; /* Makes the background circular */
+    /* padding-top: 0.1rem;
+    padding-bottom: 0.2rem; */
+    padding: 0.1rem;
+    margin: 0.3rem; /*Adjust padding for proper spacing
+    /transition: background 0.3s ease; Smooth transition on hover */
+}
+
+.social-icons a:hover {
+    background: rgba(128, 128, 128, 0.8); /* Darker grey on hover */
+}
+  
+  /* RESPONSIVE DESIGN */
+/* General styles remain same */
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+
+
+   .tripbee-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 5rem 2rem;
+    flex-wrap: wrap;
+}
+
+.tripbee-section .content {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+}
+
+.tripbee-section h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.tripbee-section h2 span {
+    color: #8e44ad; /* Purple color for "TripBee:" */
+}
+
+.tripbee-section p {
+    color: #555;
+    margin: 1rem 0;
+    max-width: 500px;
+    line-height: 2;
+}
+
+.stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.stat-item {
+    text-align: center; /* Center-align each stat */
+    flex: 1; /* Ensure equal spacing */
+    min-width: 150px; /* Prevent stats from shrinking too much */
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+    color: #333;
+}
+
+.stat-item p {
+    color: #555;
+    font-size: 1.2rem;
+}
+
+.images {
+    flex: 1;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: start;
+    min-width: 300px;
+}
+
+.main-img {
+    grid-column: span 2; /* Make the main image span across two columns */
+    width: 100%;
+    border-radius: 12px;
+}
+
+.side-images {
+    display: flex;
+    gap: 1rem;
+    /* justify-content: space-between; */
+}
+
+.side-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* object-fit: cover; */
+}
+
+.tour-options {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.tour-options h2 {
+    font-size: 2.5rem;
+    color: #8e44ad;
+    margin-bottom: 1rem;
+}
+
+.tour-options p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 4rem;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    background: transparent; /* Make the background transparent */
+    color: #8e44ad; /* Use purple for the arrow color */
+    border: 2px solid #8e44ad; /* Add a purple border */
+    border-radius: 50%; /* Make the arrows circular */
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: -50px; /* Position arrows above the carousel */
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the arrow icon */
+    transition: all 0.3s ease; /* Add a smooth hover effect */
+}
+
+.arrow:hover {
+    background: #8e44ad; /* Fill the background with purple on hover */
+    color: #fff; /* Change the arrow color to white on hover */
+}
+
+/* Left Arrow */
+.left-arrow {
+    left: 45%; /* Center the left arrow horizontally */
+}
+
+/* Right Arrow */
+.right-arrow {
+    right: 45%; /* Center the right arrow horizontally */
+}
+
+
+.carousel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    position: relative; /* Make the item a positioned container */
+    min-width: 250px;
+   height: 500px; /* Set a minimum height for the items */
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden; /* Ensure text stays within the image bounds */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.carousel-text {
+    position: absolute;
+    bottom: 10%; /* Position text near the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    width: 80%; /* Adjust width for better alignment */
+}
+
+.carousel-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.carousel-text p {
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.carousel-text span {
+    font-size: 0.9rem;
+}
+
+/* Why Choose TripBee Section */
+/* Why Choose TripBee Section */
+.why-choose {
+    padding: 4rem 1rem;
+    background-color: #f9f9f9;
+}
+
+.why-choose-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.why-choose-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.why-choose-content {
+    flex: 1;
+    text-align: center;
+}
+
+.why-choose-content h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.why-choose-content h2 span {
+    color: #8e44ad; /* Highlighted color for "TripBee" */
+}
+
+.why-choose-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for the items */
+    gap: 2rem; /* Add spacing between items */
+    text-align: center; /* Center-align all content */
+}
+
+.why-choose-item {
+    display: flex;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center-align icon and text */
+    gap: 0.5rem; /* Add spacing between icon and text */
+}
+
+.why-choose-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.5rem; /* Add spacing below the icon */
+}
+
+.why-choose-item h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.why-choose-item p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+/* === Popular Tours Section Styles === */
+
+/* Popular Tours Section */
+.popular-tours {
+    padding: 4rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+.tour-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Show 3 cards per row */
+    gap: 25px; /* Add spacing between cards */
+}
+
+.tour-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s ease;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+    border-radius: 12px;
+}
+
+.tour-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.tour-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px; /* Reduce spacing below the title */
+    color: #333;
+    font-weight: bold; /* Make the title bold */
+}
+
+.tour-info p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.tour-details {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.tour-details span:last-child {
+    font-size: 1.1rem; /* Make the price slightly larger */
+    font-weight: bold; /* Highlight the price */
+    color: #333; /* Darker color for emphasis */
+}
+
+.travel-team-section {
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff;
+  }
+  
+  .travel-team-section h2 {
+    font-size: 32px;
+    color: #3b2e58;
+    margin-bottom: 10px;
+  }
+  
+  .travel-team-section .subtitle {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    justify-items: center;
+  }
+  
+  .team-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 320px;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .team-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .team-card .info {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .team-card h3 {
+    font-size: 20px;
+    color: #2c2c2c;
+    margin-bottom: 5px;
+  }
+  
+  .team-card p {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .team-card .tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .team-card .tags span {
+    background: #f0f0f0;
+    color: #333;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+  }
+
+  /* CTA Section Styles */
+  .cta-section {
+    position: relative;
+    background: url('../assets/world.png') no-repeat center center/cover; /* Background image */
+    padding: 4rem 1rem;
+    text-align: center;
+    color: #fff;
+}
+
+.cta-overlay {
+    padding: 4rem 1rem;
+    border-radius: 12px;
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #fff; /* Button color */
+    color: #8e44ad;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+  padding: 4rem 1rem;
+  margin: 4rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.faq-section .section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.faq-section .section-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.faq-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.faq-accordion {
+  flex: 1;
+  max-width: 50%;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.faq-item.active p {
+  display: block;
+}
+
+.faq-form {
+  flex: 1;
+  max-width: 50%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: left;
+}
+
+.faq-form h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.faq-form input,
+.faq-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.faq-form button.submit-button {
+  display: block;             /* Makes it take full line to center */
+  margin: 1rem auto 0;        /* Centers horizontally */
+  padding: 0.8rem 2rem;
+  background-color: transparent;
+  color: #8e44ad;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #8e44ad;
+  border-radius: 30px;        /* Pill-style shape */
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-form button.submit-button:hover {
+  background-color: #8e44ad;
+  color: #fff;
+}
+
+
+/* FAQ Section Styles */
+.faq-section {
+  padding: 4rem 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.faq-section .section-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.faq-section .section-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+
+.faq-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Accordion Styles */
+.faq-accordion {
+  flex: 1;
+  max-width: 50%;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item h3 {
+  font-size: 1.1rem;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-item p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.faq-item.active p {
+  display: block;
+}
+
+.faq-item.active .toggle-icon {
+  transform: rotate(45deg);
+}
+
+/* Form Styles */
+.faq-form {
+  flex: 1;
+  max-width: 50%;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: left;
+}
+
+.faq-form h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.faq-form label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.faq-form label span {
+  color: red;
+}
+
+.faq-form input,
+.faq-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.faq-form button {
+  display: inline-block;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #8e44ad;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-form button:hover {
+  background-color: #732d91;
+}
+
+
+/* Newsletter Section Styles */
+.newsletter-section {
+  position: relative;
+  background: url('../assets/update.png') no-repeat center center/cover; /* Background image */
+  padding: 4rem 1rem;
+  text-align: center;
+  color: #fff;
+}
+.newsletter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align vertically center */
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.newsletter-content {
+  flex: 1;
+  text-align: left;
+}
+
+.newsletter-content h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.newsletter-content p {
+  font-size: 1rem;
+  color: #eee;
+}
+
+.newsletter-form {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.newsletter-form input {
+  width: 300px;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 0.8rem 1.5rem;
+  background-color: #8e44ad;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: #732d91;
+}
+
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-center {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.85);
+      padding: 1rem 0;
+      text-align: center;
+    }
+  
+    .nav-menu {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .contact-btn {
+      display: none; /* Hide contact button on small screens or move inside menu if needed */
+    }
+  
+    .nav-center.active {
+      display: block;
+    }
+  
+  
+  
+    .hero-content h1 {
+      font-size: 1.8rem;
+    }
+  
+    .hero-content p {
+      font-size: 0.85rem;
+    }
+  
+    .cta-button {
+      font-size: 0.85rem;
+    }
+  
+    .social-icons a img {
+      width: 20px;
+      height: 20px;
+    }
+/* 
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .stats {
+        justify-content: center;
+      }
+    
+      .side-imgs {
+        flex-direction: row;
+        justify-content: center;
+      }
+    
+      .side-imgs img {
+        width: 45%;
+      } */
+
+      .tripbee-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
+    }
+
+    .tripbee-section .content {
+        margin-bottom: 2rem; /* Add spacing between content and images */
+    }
+
+    .stats {
+        justify-content: center;
+        gap: 1rem; /* Reduce gap between stats for smaller screens */
+    }
+
+    .stat-item {
+        flex: none; /* Remove flex-grow to prevent stretching */
+        min-width: auto; /* Allow stats to shrink naturally */
+    }
+
+    .images {
+        display: flex;
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+        gap: 1rem; /* Add spacing between images */
+    }
+
+    .main-img {
+        width: 100%; /* Ensure the main image takes full width */
+        max-width: 400px; /* Limit the width for better appearance */
+    }
+
+    .side-images {
+        display: flex;
+        gap: 1rem;
+        justify-content: center; /* Center-align side images */
+    }
+
+    .side-images img {
+        width: 45%; /* Adjust width for side images */
+        height: auto;
+    }
+
+    .tour-options {
+        padding: 2rem 1rem;
+    }
+
+    .tour-options h2 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .tour-options p {
+        font-size: 1rem; /* Adjust paragraph size */
+        margin-bottom: 2rem;
+    }
+
+    .carousel-container {
+        flex-direction: column; /* Stack arrows and carousel vertically */
+        align-items: center;
+    }
+
+    .arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+        top: -40px; /* Adjust arrow position for smaller screens */
+    }
+
+    .left-arrow {
+        left: 10%; /* Align left arrow closer to the center */
+    }
+
+    .right-arrow {
+        right: 10%; /* Align right arrow closer to the center */
+    }
+
+    .carousel {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .carousel-track {
+        display: flex;
+        flex-direction: column; /* Stack carousel items vertically */
+        gap: 1rem;
+    }
+
+    .carousel-item {
+        min-width: 100%; /* Make items take full width */
+        text-align: center;
+    }
+
+    .carousel-item img {
+        width: 100%; /* Ensure images take full width */
+        border-radius: 12px;
+    }
+
+    .carousel-item h3 {
+        font-size: 1.2rem; /* Adjust heading size */
+    }
+
+    .carousel-item p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+
+    .carousel-item span {
+        font-size: 0.9rem; /* Adjust span size */
+    }
+    .why-choose-container {
+        flex-direction: column; /* Stack content vertically */
+        text-align: center;
+    }
+
+    .why-choose-image {
+        order: 2; /* Move the image below the items */
+    }
+
+    .why-choose-content {
+        order: 1; /* Keep the text content above the image */
+    }
+
+    .why-choose-items {
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+    }
+
+    .why-choose-item {
+        text-align: center; /* Center-align items for smaller screens */
+    }
+
+    .why-choose-item img {
+        margin-bottom: 0.5rem;
+    }
+
+    .tour-grid {
+        grid-template-columns: 1fr; /* Show 1 card per row on smaller screens */
+        gap: 20px; /* Adjust spacing between cards */
+    }
+
+    .tour-card {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    }
+
+    .tour-card img {
+        height: auto; /* Allow the image to adjust height dynamically */
+        border-bottom: 1px solid #eee;
+    }
+
+    .tour-info {
+        padding: 15px;
+        text-align: left; /* Keep text left-aligned */
+    }
+
+    .tour-info h3 {
+        font-size: 1.1rem; /* Adjust title size for smaller screens */
+        margin-bottom: 5px;
+    }
+
+    .tour-info p {
+        font-size: 0.9rem; /* Adjust subtitle size */
+        color: #777;
+        margin-bottom: 10px;
+    }
+
+    .tour-details {
+        display: flex;
+        justify-content: space-between; /* Align "Starts From" and price */
+        align-items: center;
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .tour-details span:last-child {
+        font-size: 1rem; /* Highlight the price */
+        font-weight: bold;
+        color: #333;
+    }
+
+    .cta-content h2 {
+      font-size: 2rem; /* Adjust heading size for smaller screens */
+  }
+
+  .cta-content p {
+      font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  .cta-button {
+      font-size: 0.9rem; /* Adjust button size */
+      padding: 0.7rem 1.5rem;
+  }
+
+  
+  .faq-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .faq-accordion,
+  .faq-form {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .faq-section {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .faq-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .faq-form button.submit-button {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+
+    .newsletter-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .newsletter-form input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+    }
+}
+
+    
